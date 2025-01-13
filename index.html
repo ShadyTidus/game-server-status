@@ -53,30 +53,32 @@
     </div>
 
     <script>
-        // Initialize widgets for each server
+        // Steam Widgets integration for 7 Days to Die
         SteamWidgets.init({
             element: '#server-7dtd',
             server: {
                 ip: '208.191.79.30',
-                port: 26900,
+                port: 26900, // Query port for 7 Days to Die
             },
-            theme: 'dark',
+            theme: 'dark', // Theme: 'dark' or 'light'
         });
 
+        // Steam Widgets integration for ARK: Survival Evolved
         SteamWidgets.init({
             element: '#server-ark',
             server: {
                 ip: '208.191.79.30',
-                port: 27016,
+                port: 27016, // Query port for ARK
             },
             theme: 'dark',
         });
 
+        // Steam Widgets integration for Palworld
         SteamWidgets.init({
             element: '#server-palworld',
             server: {
                 ip: '208.191.79.30',
-                port: 27015,
+                port: 27015, // Query port for Palworld
             },
             theme: 'dark',
         });

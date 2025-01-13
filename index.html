@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Server Status</title>
-    <script src="https://www.steamwidgets.net/api/resource/query?type=js&module=server-status&version=v1"></script>
+    <script src="https://www.steamwidgets.net/api/resource/query?type=js&module=steam-server&version=v1"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,21 +13,12 @@
             background-color: #121212;
             color: #fff;
         }
-        .server {
-            margin-bottom: 30px;
-            padding: 15px;
-            border: 1px solid #444;
-            border-radius: 8px;
-            background-color: #1e1e1e;
-        }
         h1 {
             text-align: center;
+            margin-bottom: 30px;
         }
-        .server h2 {
-            margin: 0 0 10px;
-        }
-        .server-status {
-            padding: 10px;
+        .server {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -37,51 +28,19 @@
     <!-- 7 Days to Die -->
     <div class="server">
         <h2>7 Days to Die</h2>
-        <div id="server-7dtd" class="server-status"></div>
+        <steam-server addr="208.191.79.30:26900"></steam-server>
     </div>
 
     <!-- ARK: Survival Evolved -->
     <div class="server">
         <h2>ARK: Survival Evolved</h2>
-        <div id="server-ark" class="server-status"></div>
+        <steam-server addr="208.191.79.30:27016"></steam-server>
     </div>
 
     <!-- Palworld -->
     <div class="server">
         <h2>Palworld</h2>
-        <div id="server-palworld" class="server-status"></div>
+        <steam-server addr="208.191.79.30:27015"></steam-server>
     </div>
-
-    <script>
-        // Steam Widgets integration for 7 Days to Die
-        SteamWidgets.init({
-            element: '#server-7dtd',
-            server: {
-                ip: '208.191.79.30',
-                port: 26900, // Query port for 7 Days to Die
-            },
-            theme: 'dark', // Theme: 'dark' or 'light'
-        });
-
-        // Steam Widgets integration for ARK: Survival Evolved
-        SteamWidgets.init({
-            element: '#server-ark',
-            server: {
-                ip: '208.191.79.30',
-                port: 27016, // Query port for ARK
-            },
-            theme: 'dark',
-        });
-
-        // Steam Widgets integration for Palworld
-        SteamWidgets.init({
-            element: '#server-palworld',
-            server: {
-                ip: '208.191.79.30',
-                port: 27015, // Query port for Palworld
-            },
-            theme: 'dark',
-        });
-    </script>
 </body>
 </html>
